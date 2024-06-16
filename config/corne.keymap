@@ -1,4 +1,4 @@
-3/*
+/*
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
@@ -53,15 +53,6 @@
                              &kp LGUI &trans   &kp SPACE     &kp RET    &trans    &kp LALT
                          >;
                 };
-led_strip: led_strip {
-        compatible = "zmk,led-strip";
-        label = "LED Strip";
-        chain-length = <12>; // Número de LEDs en la tira
-        io-channels = <&adc 0>;
-        color_mapping = <LED_COLOR_MAPPING_GRB>;
-        pixel_format = <LED_PIXEL_FORMAT_RGB>;
-        power-gpios = <&gpio0 0 GPIO_ACTIVE_HIGH>;
-        data-gpios = <&gpio0 1 GPIO_ACTIVE_HIGH>;
-    };
+
         };
 };
